@@ -14,28 +14,35 @@
 <!-- WAG GAGAMIT NG CONTROL Z OR UNDO!!! -->
 
 <body>
-  
     <div>
         <!-- START OF NAVIGATION-->
-        <eneme class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="#">Navbar</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarNav">
-                <ul>
-                  <li><a href="#home" class="aktib">Home</a></li>
-                  <li><a href="#about">About</a></li>
-                  <li><a href="#fees">Conference Fees</a></li>
-                  <li><a href="#research">Research Category</a></li>
-                  <li><a href="#extension">Extension Category</a></li>
-                  <li><a href="#collab">Collaborating Organizations</a></li>
-                  <li><a href="#eposters">E-Posters</a></li>
-                </ul>
-              </div>
-            </div>
-        </eneme>
+        <div id="offcanvas-menu" class="offcanvas">
+            <ul>
+                <li><a href="#home" class="aktib">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#fees">Conference Fees</a></li>
+                <li><a href="#research">Research Category</a></li>
+                <li><a href="#extension">Extension Category</a></li>
+                <li><a href="#collab">Collaborating Organizations</a></li>
+                <li><a href="#eposters">E-Posters</a></li>
+            </ul>
+        </div>
+    
+        <!-- The button to toggle the menu -->
+        <button class="menu-toggle" id="menu-toggle">
+            &#9776; <!-- Hamburger Icon -->
+        </button>
+    
+        <script>
+            document.getElementById('menu-toggle').addEventListener('click', function() {
+                const offcanvas = document.getElementById('offcanvas-menu');
+                const body = document.body;
+                
+                offcanvas.classList.toggle('open');
+                body.classList.toggle('open'); // Optional: this can help manage other content when menu is open
+            });
+        </script>
+        <!--
         <eneme>
             <ul>
                 <li><a href="#home" class="aktib">Home</a></li>
@@ -47,6 +54,8 @@
                 <li><a href="#eposters">E-Posters</a></li>
             </ul>
         </eneme>
+        -->
+
         <!-- END OF NAVIGATION-->
 
         <!-- START OF HOME-->
