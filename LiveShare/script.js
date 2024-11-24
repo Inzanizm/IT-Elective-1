@@ -18,7 +18,7 @@ window.onscroll = () => {
         if(top >= offset && top < offset + height) {
             navah.forEach(links => {
                 links.classList.remove('aktib');
-                document.querySelector('eneme ul li a[href=' + id + ']').classList.add
+                document.querySelector('eneme ul li a[href=*' + id + ']').classList.add
                 ('aktib');
             });
         };

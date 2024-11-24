@@ -3,6 +3,10 @@ html, body {
     overflow-x: hidden;
 }
 
+body{
+    background-color: black;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -79,8 +83,8 @@ eneme{
     width: 0;
     position: fixed;
     top: 0;
-    left: 0;
-    background-color: #333;
+    right: 0;
+    background-color: #b1c6ff;
     overflow-x: hidden;
     transition: 0.3s;
     padding-top: 60px;
@@ -96,25 +100,31 @@ eneme{
 }
 
 .offcanvas ul li a {
-    color: white;
+    color: rgb(0, 0, 0);
     text-decoration: none;
-    font-size: 25px;
+    font-size: 18px;
+    line-height: 18px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .offcanvas ul li a:hover {
-    color: #f1f1f1;
+    color: #ffffff;
 }
 
 /* Button to open/close the menu */
 .menu-toggle {
     font-size: 30px;
-    position: absolute;
+    position: fixed;
     top: 20px;
-    left: 20px;
+    right: 20px;
     background-color: transparent;
     border: none;
-    color: #333;
+    color: #0c0c0c;
     cursor: pointer;
+}
+
+.menu-toggle:active {
+    color: #fff;
 }
 
 /* Content that will be pushed to the right when menu is open */
@@ -348,6 +358,17 @@ eneme{
     text-align: center;
 }
 
+.researchBaks {
+    padding: 10%;
+    background-color: rgb(248, 248, 235);
+    padding-top: 2%;
+    padding-bottom: 2%;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    margin-right: 30px;
+    margin-left: 30px;
+}
+
 @media (max-width: 1250px) {
     .researchG4{
         grid-column: 2;
@@ -417,6 +438,16 @@ eneme{
     font-weight: bolder;
 }
 
+.eksBaks {
+    padding: 10%;
+    background-color: rgb(248, 248, 235);
+    padding-top: 2%;
+    padding-bottom: 2%;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    margin-right: 30px;
+    margin-left: 30px;
+}
 #extension .kaliwa{
     text-align: left;
 }
@@ -457,8 +488,17 @@ eneme{
 
 /*---END OF EXTENSION CATEGORY---*/
 
+/*---START OF COLLABORATING ORGANIZATION---*/
 
+#collab h1 {
+    font-size: 2.5em;
+    color: black;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+}
 
+/*---END OF COLLABORATING ORGANIZATION---*/
 
 /*---START OF EPOSTER---*/
 #eposters h1 {
