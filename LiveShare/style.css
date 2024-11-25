@@ -462,6 +462,14 @@ eneme{
     font-weight: bolder;
 }
 
+#extension ul li {
+    list-style: disc;
+    text-align: justify;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    margin: 0px 20px 0px 20px;
+    color: #000;
+}
 .bekstensyon li {
     text-align: left;
     font-size: 1.1em;
