@@ -1,11 +1,12 @@
-html,
-body {
-    width: 100%;
-    overflow-x: hidden;
+:root {
+    overflow: hidden;
+    height: 100%;
 }
 
 body {
-    background-color: black;
+    position: relative;
+    overflow-y: scroll;
+    height: 100%;
 }
 
 * {
@@ -680,7 +681,7 @@ eneme{
     padding: 5px 2%;
 }
 
-.paa ul li a{
+.paa ul li a {
     position: relative;
     font-weight: 500;
     text-decoration: none;
@@ -751,11 +752,14 @@ eneme{
     }
 }
 
-.hidden {
+.local,
+.foreign {
+    animation-timeline: view(90% 10%);
+    animation-name: fade-in;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
     opacity: 0;
-    transition: all 1s;
     filter: blur(5px);
-    transform: translateY(100%);
 }
 
 .local {
@@ -766,7 +770,38 @@ eneme{
     transform: translateX(100%);
 }
 
-.researchG2 {
+.researchGrid div{
+    animation-timeline: view(60% 10%);
+    animation-name: fade-in;
+    animation-duration: .5s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateY(100%);
+}
+
+.researchGrid .researchG2{
+    animation-delay: 200ms;
+}
+
+.researchGrid .researchG3{
+    animation-delay: 400ms;
+}
+
+.researchGrid .researchG4{
+    animation-delay: 600ms;
+}
+
+@keyframes fade-in {
+    to {
+        opacity: 1;
+        filter: blur(0);
+        transform: translate(0, 0);
+    }
+}
+
+/* .researchG2 {
     transition-delay: 100ms;
 }
 
@@ -782,7 +817,7 @@ eneme{
     opacity: 1;
     filter: blur(0);
     transform: translate(0, 0);
-}
+} */
 
 /*---END OF ANIMATIONS---*/
 
