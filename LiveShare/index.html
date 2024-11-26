@@ -13,6 +13,7 @@
 
 <body>
     <div>
+        <div class="scroll-watcher"></div>
         <!-- START OF NAVIGATION-->
         <div id="offcanvas-menu" class="offcanvas">
             <ul>
@@ -31,17 +32,8 @@
             &#9776; <!-- Hamburger Icon -->
         </button>
     
-        <script>
-            document.getElementById('menu-toggle').addEventListener('click', function() {
-                const offcanvas = document.getElementById('offcanvas-menu');
-                const body = document.body;
-                
-                offcanvas.classList.toggle('open');
-                body.classList.toggle('open'); // Optional: this can help manage other content when menu is open
-            });
-        </script>
-        <!--
-        <eneme>
+        
+        <!-- <eneme>
             <ul>
                 <li><a href="#home" class="aktib">Home</a></li>
                 <li><a href="#about">About</a></li>
@@ -51,60 +43,63 @@
                 <li><a href="#collab">Collaborating Organizations</a></li>
                 <li><a href="#eposters">E-Posters</a></li>
             </ul>
-        </eneme>
-        -->
+        </eneme> -->
+       
 
         <!-- END OF NAVIGATION-->
+         
+         <!-- START OF HOME-->
 
-        <!-- START OF HOME-->
-        <div class="section" id="home">
-
+        <div class="containervid" id="home">
+            <video  autoplay loop muted plays-inline class="background-clip">
+                <source src="VIDEO HERE" type="video/mp4"> <!-- Input Video-->
+            </video>
         </div>
+
+        
         <!-- END OF HOME-->
 
         <!-- START OF ABOUT-->
         <div class="section" id="about">
-
-            <h1 style="padding-top: 40px;">ABOUT THE CONFERENCE</h1>
-
+            <h1>ABOUT THE CONFERENCE</h1>
             <h3>
                 2025 URS International Multidisciplinary Research and <br>
                 Extension AdvocacynConferencer Champions of Change (IMREACH)<br>
                 October 10-11, 2024 URS International Multidisciplinary Research
             </h3>
-
-            <p>The University of Rizal System deems it essential to sustain its efforts on the internationalization of
-                operations.
-                The twin functions of research and extension are very significant and therefore keeping abreast on the
-                new developments will be of great help to the academic community. The continued dissemination of
-                significant information will therefore ensure that academic, research and training institutions are
-                making
-                scholarly outputs and community development outcomes accessible to stakeholders.
-                The 2025 URS International Multidisciplinary Research and Extension Advocacy Conference
-                for Champions of Change (IMREACH) intends to serve as an avenue for researchers and extension
-                practitioners across disciplines to share relevant information, research outputs and best practices
-                in community development. This will benefit the interested groups with enhanced understanding
-                and appreciation of research development and extension services not only as institutional mandates but
-                as
-                commitment to help improve life. The international multidisciplinary research and extension advocacy
-                conference for champions of change will give opportunity to widen prospects, strengthen partnerships and
-                gain knowledge on innovative and scaled up initiatives for more empowered communities.
-
-            </p>
-
-            <h3>
-                In particular, this will: <br>
-            </h3>
-
-            <p>
-                1. highlight the significance of scaled up efforts in the internationalization
-                of research and extension services;<br>
-                2. provide a platform on which service learning can be realized through the
-                presentation of qualified papers in research and extension; <br>
-                3. address global sustainability challenges with research and extension
-                for a more progressive society, and; <br>
-                4. promote inter/multi-disciplinary approaches in research and extension undertakings.
-            </p>
+            <div class="cnukami">
+                <p>The University of Rizal System deems it essential to sustain its efforts on the internationalization of
+                    operations.
+                    The twin functions of research and extension are very significant and therefore keeping abreast on the
+                    new developments will be of great help to the academic community. The continued dissemination of
+                    significant information will therefore ensure that academic, research and training institutions are
+                    making
+                    scholarly outputs and community development outcomes accessible to stakeholders.
+                    The 2025 URS International Multidisciplinary Research and Extension Advocacy Conference
+                    for Champions of Change (IMREACH) intends to serve as an avenue for researchers and extension
+                    practitioners across disciplines to share relevant information, research outputs and best practices
+                    in community development. This will benefit the interested groups with enhanced understanding
+                    and appreciation of research development and extension services not only as institutional mandates but
+                    as
+                    commitment to help improve life. The international multidisciplinary research and extension advocacy
+                    conference for champions of change will give opportunity to widen prospects, strengthen partnerships and
+                    gain knowledge on innovative and scaled up initiatives for more empowered communities.
+                </p>
+            </div>
+                <h3>
+                    In particular, this will: <br>
+                </h3>
+                <div class="cnukami">
+                    <p>
+                        1. highlight the significance of scaled up efforts in the internationalization
+                        of research and extension services;<br>
+                        2. provide a platform on which service learning can be realized through the
+                        presentation of qualified papers in research and extension; <br>
+                        3. address global sustainability challenges with research and extension
+                        for a more progressive society, and; <br>
+                        4. promote inter/multi-disciplinary approaches in research and extension undertakings.
+                    </p>
+                </div>
         </div>
         <!-- END OF ABOUT-->
 
@@ -138,14 +133,14 @@
 
             <!---Start of Grid (Call For Abstract)--->
             <div class="researchGrid">
-                <div class="researchG1">
+                <div class="researchG1 hidden">
                     <h2>Group 1</h2>
                     <ul>
                         <li>Quality Education</li>
                     </ul>
                 </div>
 
-                <div class="researchG2">
+                <div class="researchG2 hidden">
                     <h2>Group 2</h2>
                     <ul>
                         <li>Good Health and Well-Being</li>
@@ -153,7 +148,7 @@
                     </ul>
                 </div>
 
-                <div class="researchG3">
+                <div class="researchG3 hidden">
                     <h2>Group 3</h2>
                     <ul>
                         <li>Sustainable Communities and Cities</li>
@@ -161,7 +156,7 @@
                     </ul>
                 </div>
 
-                <div class="researchG4">
+                <div class="researchG4 hidden">
                     <h2>Group 4</h2>
                     <ul>
                         <li>Responsible Consumption and Production</li>
@@ -326,7 +321,38 @@
     <!--START OF COLLABORATING ORGANIZATION-->
     <div class="section" id="collab">
         <h1 style="padding-top: 40px;">COLLABORATING ORGANIZATION</h1>
-
+        <div class="orgyarn">
+           <div class="lagous">
+                <img src="img/1.png" alt="">
+                <img src="img/1.png" alt="">
+                <img src="img/1.png" alt="">
+                <img src="img/1.png" alt="">
+                <img src="img/1.png" alt="">
+                <img src="img/1.png" alt="">
+                <img src="img/1.png" alt="">
+                <img src="img/1.png" alt="">
+            </div>
+            <div class="lagous">
+                <img src="img/1.png" alt="">
+                <img src="img/1.png" alt="">
+                <img src="img/1.png" alt="">
+                <img src="img/1.png" alt="">
+                <img src="img/1.png" alt="">
+                <img src="img/1.png" alt="">
+                <img src="img/1.png" alt="">
+                <img src="img/1.png" alt="">
+            </div>
+            <div class="lagous">
+                <img src="img/1.png" alt="">
+                <img src="img/1.png" alt="">
+                <img src="img/1.png" alt="">
+                <img src="img/1.png" alt="">
+                <img src="img/1.png" alt="">
+                <img src="img/1.png" alt="">
+                <img src="img/1.png" alt="">
+                <img src="img/1.png" alt="">
+            </div>
+        </div>
     </div>
     <!--END OF COLLABORATING ORGANIZATION-->
 
@@ -334,56 +360,49 @@
     <div class="section" id="eposters">
         <h1 style="padding-top: 40px;">E-POSTER PRESENTATION GUIDELINES</h1>
         <h2>(For Both Research and Extension)</h2>
-        <ol>
-            <li>The e-poster must be in video format. Video: in Microsoft formats (i.e. .asf, .wmv, .mp4)</li>
-            <li>The e-poster will be displayed in the poster loop played online. Multimedia (picture/video) can be
-                integrated into the e-poster showing animations, simulations, or other content. The total playing time
-                must not exceed 3 minutes of duration.</li>
-            <li>Each e-poster presentation must contain the following: category (as to whether it is a research or
-                extension project), title of the paper, author(s), affiliation(s), rationale, objectives,
-                conceptual/development framework, methodology, results, conclusion, acknowledgment.</li>
-            <li>Layout:
-                <ul>
-                    <li>Size: 16x9 aspect ratio</li>
-                    <li>Minimum Font 28</li>
-                    <li>Font type: Arial, Calibri, Times New Roman</li>
-                </ul>
-            </li>
-            <li>File Name Format: Category_Thematic Area_Institution_Name</li>
-        </ol>
+        <div class="boxbox">
+            <ol>
+                <li>The e-poster must be in video format. Video: in Microsoft formats (i.e. .asf, .wmv, .mp4)</li>
+                <li>The e-poster will be displayed in the poster loop played online. Multimedia (picture/video) can be
+                    integrated into the e-poster showing animations, simulations, or other content. The total playing time
+                    must not exceed 3 minutes of duration.</li>
+                <li>Each e-poster presentation must contain the following: category (as to whether it is a research or
+                    extension project), title of the paper, author(s), affiliation(s), rationale, objectives,
+                    conceptual/development framework, methodology, results, conclusion, acknowledgment.</li>
+                <li>Layout:
+                    <ul>
+                        <li>Size: 16x9 aspect ratio</li>
+                        <li>Minimum Font 28</li>
+                        <li>Font type: Arial, Calibri, Times New Roman</li>
+                    </ul>
+                </li>
+                <li>File Name Format: Category_Thematic Area_Institution_Name</li>
+            </ol>
+        </div>
     </div>
     <!--END OF EPOSTERS-->
 
     <!--START OF FOOTER-->
-    <div class="footer">
+    <div class="paa">
         <div class="logo-group">
-            <img src="img/1.png" alt="" class="logo1">
-            <img src="img/1.png" alt="" class="logo2">
-            <img src="img/1.png" alt="" class="logo3">
-            <img src="img/1.png" alt="" class="logo4">
+            <a href=""><img src="img/1.png" alt="" class="logo1"></a>
+            <a href=""><img src="img/1.png" alt="" class="logo2"></a>
+            <a href=""><img src="img/1.png" alt="" class="logo3"></a>
+            <a href=""><img src="img/1.png" alt="" class="logo4"></a>
         </div>
-        <div class="paa">
             <ul>
                 <li><a href="#home">Home</a></li>
-                <li>|</li>
                 <li><a href="#about">About</a></li>
-                <li>|</li>
                 <li><a href="#fees">Conference Fees</a></li>
-                <li>|</li>
                 <li><a href="#research">Research Category</a></li>
-                <li>|</li>
                 <li><a href="#extension">Extension Category</a></li>
-                <li>|</li>
                 <li><a href="#collab">Collaborating Organizations</a></li>
-                <li>|</li>
                 <li><a href="#eposters">E-Posters</a></li>
             </ul>
             <ul class="bottom-footer">
                 <li>UNIVERSITY OF RIZAL SYSTEM</li>
-                <li>|</li>
                 <li>Rizal, Philippines</li>
             </ul>
-        </div>
     </div>
 
     </div>

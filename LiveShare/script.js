@@ -25,6 +25,14 @@ window.onscroll = () => {
     });
 };
 
+document.getElementById('menu-toggle').addEventListener('click', function() {
+    const offcanvas = document.getElementById('offcanvas-menu');
+    const body = document.body;
+    
+    offcanvas.classList.toggle('open');
+    body.classList.toggle('open'); // Optional: this can help manage other content when menu is open
+});
+
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         console.log(entry)

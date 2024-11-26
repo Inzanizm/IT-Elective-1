@@ -1,9 +1,10 @@
-html, body {
+html,
+body {
     width: 100%;
     overflow-x: hidden;
 }
 
-body{
+body {
     background-color: black;
 }
 
@@ -16,7 +17,7 @@ body{
 
 /*eneme = nav*/
 
-/*---START OF NAV---
+/*---START OF NAV
 eneme {
     display: flex;
     width: 100%;
@@ -24,8 +25,7 @@ eneme {
     top: 0;
     background-color: red;
     justify-content: center;
-    z-index: 10;
-    display: none;
+    z-index: 1;
 }
 
 eneme ul {
@@ -74,8 +74,7 @@ eneme ul li:hover:after{
 eneme{
     width: 100%;
 }
-
---*/
+---*/
 
 /* The off-canvas menu style */
 .offcanvas {
@@ -84,10 +83,11 @@ eneme{
     position: fixed;
     top: 0;
     right: 0;
-    background-color: #b1c6ff;
+    background-color: #0D0D0D;
     overflow-x: hidden;
     transition: 0.3s;
     padding-top: 60px;
+    z-index: 2;
 }
 
 .offcanvas ul {
@@ -100,7 +100,7 @@ eneme{
 }
 
 .offcanvas ul li a {
-    color: rgb(0, 0, 0);
+    color: #fff;
     text-decoration: none;
     font-size: 18px;
     line-height: 18px;
@@ -108,7 +108,7 @@ eneme{
 }
 
 .offcanvas ul li a:hover {
-    color: #ffffff;
+    color: #000;
 }
 
 /* Button to open/close the menu */
@@ -119,13 +119,24 @@ eneme{
     right: 20px;
     background-color: transparent;
     border: none;
-    color: #0c0c0c;
+    color: #fff;
+    padding: 0px 3px 0px 3px;
     cursor: pointer;
+    z-index: 2;
+}
+
+.menu-toggle:hover {
+    color: #182C3E;
 }
 
 .menu-toggle:active {
-    color: #fff;
+    color: #000;
 }
+
+
+
+
+
 
 /* Content that will be pushed to the right when menu is open */
 .content {
@@ -148,9 +159,10 @@ eneme{
     width: 100%;
     min-height: 100vh;
     height: auto;
-    background-color: beige;
+    background-color: white;
 }
 
+/*
 .section:nth-child(odd) {
     background-color: lightcyan;
 }
@@ -160,22 +172,36 @@ eneme{
 /*---START OF ABOUT---*/
 
 #about {
-    padding: 5%;
+    padding: 3%;
+    background-color: #3A536B;
 }
 
 #about h1 {
     font-size: 2.5em;
-    color: black;
+    color: #fff;
     text-align: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+.cnukami {
+    padding: 10%;
+    background-color: rgb(248, 248, 235);
+    padding-top: 2%;
+    padding-bottom: 2%;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    margin-right: 30px;
+    margin-left: 30px;
+}
+
 #about h3 {
     font-size: 1em;
-    color: black;
+    color: #fff;
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bolder;
+    padding-bottom: 10px;
+    padding-top: 10px;
 }
 
 #about p {
@@ -183,26 +209,27 @@ eneme{
     color: black;
     text-align: justify;
     font-family: Arial, Helvetica, sans-serif;
-    
+    padding-bottom: 10px;
 }
 
 /*---END OF ABOUT---*/
 
 /*---START OF FEES---*/
-#fees{
+#fees {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background-color: #182C3E;
 }
 
 #fees h1 {
     display: block;
     font-size: 2.5em;
-    color: black;
+    color: #fff;
     text-align: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    margin-bottom: 8rem;
+    margin-bottom: 4rem;
 }
 
 #fees .feesbox {
@@ -215,7 +242,7 @@ eneme{
 .local {
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
-    background: #A9CFEE;
+    background: #CCDCFF;
     color: #087762;
     font-size: 1.1em;
     text-align: center;
@@ -223,8 +250,8 @@ eneme{
 
 .foreign {
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;    
-    background: #A9CFEE;
+    border-radius: 10px;
+    background: #CCDCFF;
     color: #087762;
     font-size: 1.1em;
     text-align: center;
@@ -260,6 +287,10 @@ eneme{
 
 /*---START OF RESEARCH CATEGORY---*/
 
+#research {
+    background-color: #CCDCFF;
+}
+
 #research h1 {
     font-size: 2.5em;
     color: black;
@@ -272,7 +303,7 @@ eneme{
 
 #research h2 {
     font-size: 1.2em;
-    color: black;
+    color: #fff;
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bolder;
@@ -281,7 +312,7 @@ eneme{
 
 #research h3 {
     font-size: 1.5em;
-    color: black;
+    color: #000;
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
     padding-bottom: 10px;
@@ -292,7 +323,7 @@ eneme{
 
 #research p {
     font-size: 1em;
-    color: black;
+    color: #fff;
     text-align: justify;
     font-family: Arial, Helvetica, sans-serif;
     padding: 0px 30px 10px 30px;
@@ -305,7 +336,7 @@ eneme{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1em;
     margin: 0px 20px 0px 20px;
-    color: #000;
+    color: #fff;
 }
 
 .listahan {
@@ -325,7 +356,7 @@ eneme{
 .researchG1 {
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
-    background: #A9CFEE;
+    background: #3A536B;
     color: #087762;
     font-size: 1.1em;
     text-align: center;
@@ -334,7 +365,7 @@ eneme{
 .researchG2 {
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
-    background: #A9CFEE;
+    background: #3A536B;
     color: #087762;
     font-size: 1.1em;
     text-align: center;
@@ -343,7 +374,7 @@ eneme{
 .researchG3 {
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
-    background: #A9CFEE;
+    background: #3A536B;
     color: #087762;
     font-size: 1.1em;
     text-align: center;
@@ -352,7 +383,7 @@ eneme{
 .researchG4 {
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
-    background: #A9CFEE;
+    background: #3A536B;
     color: #087762;
     font-size: 1.1em;
     text-align: center;
@@ -360,7 +391,7 @@ eneme{
 
 .researchBaks {
     padding: 10%;
-    background-color: rgb(248, 248, 235);
+    background-color: #182C3E;
     padding-top: 2%;
     padding-bottom: 2%;
     border-radius: 10px;
@@ -370,14 +401,14 @@ eneme{
 }
 
 @media (max-width: 1250px) {
-    .researchG4{
+    .researchG4 {
         grid-column: 2;
         grid-row: 2;
     }
 }
 
 @media (max-width: 600px) {
-    .researchG4{
+    .researchG4 {
         grid-column: initial;
         grid-row: initial;
     }
@@ -387,17 +418,21 @@ eneme{
 
 /*---START OF EXTENSION CATEGORY---*/
 
+#extension {
+    background-color: #CCDCFF;
+}
+
 #extension h1 {
     font-size: 2.5em;
     color: black;
     text-align: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    
+
 }
 
 #extension p {
     font-size: 1em;
-    color: black;
+    color: #fff;
     text-align: justify;
     font-family: Arial, Helvetica, sans-serif;
     padding: 0px 30px 10px 30px;
@@ -415,14 +450,14 @@ eneme{
 }
 
 @media (max-width: 910px) {
-    .bekstensyon{
+    .bekstensyon {
         grid-template-columns: minmax(270px, 1fr);
     }
 }
 
 .beks {
     padding: 10%;
-    background-color: rgb(233, 233, 210);
+    background-color: #182C3E;
     padding-top: 2%;
     padding-bottom: 3%;
     border-radius: 10px;
@@ -432,7 +467,7 @@ eneme{
 #extension h2 {
     text-align: center;
     font-size: 1em;
-    color: black;
+    color: #fff;
     font-family: Arial, Helvetica, sans-serif;
     padding-bottom: 10px;
     font-weight: bolder;
@@ -440,7 +475,7 @@ eneme{
 
 .eksBaks {
     padding: 10%;
-    background-color: rgb(248, 248, 235);
+    background-color: #3A536B;
     padding-top: 2%;
     padding-bottom: 2%;
     border-radius: 10px;
@@ -448,9 +483,11 @@ eneme{
     margin-right: 30px;
     margin-left: 30px;
 }
-#extension .kaliwa{
+
+#extension .kaliwa {
     text-align: left;
 }
+
 #extension h3 {
     font-size: 1.5em;
     align-items: center;
@@ -468,8 +505,9 @@ eneme{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1em;
     margin: 0px 20px 0px 20px;
-    color: #000;
+    color: #fff;
 }
+
 .bekstensyon li {
     text-align: left;
     font-size: 1.1em;
@@ -488,7 +526,7 @@ eneme{
     margin-left: 30px;
 }
 
-.beksabs li{
+.beksabs li {
     font-size: 1em;
     font-weight: bolder;
     font-family: Arial, Helvetica, sans-serif;
@@ -498,30 +536,83 @@ eneme{
 
 /*---START OF COLLABORATING ORGANIZATION---*/
 
+#collab {
+    background-color: #3A536B;
+}
+
 #collab h1 {
     font-size: 2.5em;
-    color: black;
+    color: #fff;
     text-align: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    
+    padding-bottom: 10px;
+}
+
+@keyframes kineme {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+
+}
+
+.orgyarn {
+    overflow: hidden;
+    padding: 10% 0;
+    white-space: nowrap;
+}
+
+.lagous {
+    display: inline-block;
+    animation: 15s kineme infinite linear;
+}
+
+.lagous img {
+    width: 200px;
+    height: auto;
+    vertical-align: middle;
+    display: inline-block;
+    box-sizing: border-box;
+    margin: 2vw;
 }
 
 /*---END OF COLLABORATING ORGANIZATION---*/
 
 /*---START OF EPOSTER---*/
+
+#eposters {
+    background-color: #182C3E;
+}
+
 #eposters h1 {
     font-size: 2.5em;
-    color: black;
+    color: #fff;
     text-align: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding-bottom: 10px;
 }
 
 #eposters h2 {
     font-size: 1.5em;
-    color: black;
+    color: #fff;
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bolder;
+    padding-bottom: 10px;
+}
+
+.boxbox {
+    padding: 10%;
+    background-color: #CCDCFF;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    margin-right: 30px;
+    margin-left: 30px;
 }
 
 #eposters ol {
@@ -538,10 +629,9 @@ eneme{
     font-family: Arial, Helvetica, sans-serif;
     margin-left: 30px;
     margin-right: 50px;
-    margin-top: 10px;
 }
 
-#eposters ul{
+#eposters ul {
     list-style: circle;
     padding-left: 20px;
 }
@@ -549,10 +639,13 @@ eneme{
 /*---END OF EPOSTER---*/
 
 /*---START OF FOOTER---*/
-.footer {
-    background-color: black;
+.paa {
+    background-color: #262C33;
     width: 100%;
-    height: 25vh;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
 .logo-group {
@@ -562,26 +655,33 @@ eneme{
 }
 
 .logo-group img {
-    width: 4%;
-    height: 4%;
-    margin: .5em 1em;
+    width: 40px;
+    height: 40px;
+    margin: 0 20px;
 }
 
-.paa {
+/* .paa {
     display: block;
     width: 100%;
     justify-content: center;
-}
+} */
 
-.paa ul:first-child {
+
+.paa ul:nth-child(2) {
     overflow: hidden;
     list-style-type: none;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     color: white;
 }
 
-.paa a {
+.paa ul li {
+    display: inline-block;
+    padding: 5px 2%;
+}
+
+.paa ul li a{
+    position: relative;
     font-weight: 500;
     text-decoration: none;
     font-family: "Inter", sans-serif;
@@ -589,15 +689,18 @@ eneme{
     display: block;
     font-size: 16px;
     color: white;
+    padding: 5px;
 }
 
-.paa ul:first-child li {
-    display: inline-block;
-    position: relative;
-    margin: 10px 10px;
+.paa ul li {
+    border-right: 1px solid white;
 }
 
-.paa ul:first-child li::after {
+.paa ul li:last-child {
+    border-right: none;
+}
+
+.paa ul:nth-child(2) a::after {
     content: '';
     height: 3px;
     width: 0;
@@ -608,53 +711,91 @@ eneme{
     transition: 0.5s;
 }
 
-.paa ul li:hover::after {
+.paa ul:nth-child(2) a:hover::after {
     width: 100%;
 }
 
-.bottom-footer{
+.paa ul:last-child {
     display: flex;
     justify-content: center;
 }
 
-.bottom-footer li{
+.paa ul:last-child li {
     font-weight: 500;
     text-decoration: none;
     font-family: "Inter", sans-serif;
     text-align: center;
-    display: block;
     font-size: 16px;
     color: white;
-    margin: 10px 10px;
 }
+
 /*---END OF FOOTER---*/
 
-/*---RESPONSIVE MOBILE---*/
-.hidden{
+/*---START OF ANIMATIONS---*/
+.scroll-watcher {
+    height: 7px;
+    position: fixed;
+    top: 0;
+    z-index: 3;
+    background-color: #8ecae6;
+    width: 100%;
+    scale: 0 1;
+    transform-origin: left;
+    animation: scroll-watcher linear;
+    animation-timeline: scroll();
+}
+
+@keyframes scroll-watcher {
+    to {
+        scale: 1 1;
+    }
+}
+
+.hidden {
     opacity: 0;
     transition: all 1s;
     filter: blur(5px);
+    transform: translateY(100%);
 }
 
-.local{
+.local {
     transform: translateX(-100%);
 }
 
-.foreign{
+.foreign {
     transform: translateX(100%);
 }
 
-.show{
-    opacity: 1;
-    filter: blur(0);
-    transform: translateX(0);
+.researchG2 {
+    transition-delay: 100ms;
 }
 
+.researchG3 {
+    transition-delay: 200ms;
+}
 
-/*
-@media (minimum-width: 600px) {
-    .section{
-        text-align: center;
+.researchG4 {
+    transition-delay: 300ms;
+}
 
-    }
-} */
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translate(0, 0);
+}
+
+/*---END OF ANIMATIONS---*/
+
+.containervid {
+    background-color: rgb(0, 0, 0, .4);
+    width: 100%;
+    display: flex;
+}
+
+.background-clip {
+
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    width: 100%;
+}
