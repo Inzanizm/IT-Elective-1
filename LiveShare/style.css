@@ -1,12 +1,14 @@
-:root {
-    overflow: hidden;
-    height: 100%;
-}
-
 body {
     position: relative;
     overflow-y: scroll;
     height: 100%;
+
+}
+
+@media (max-width: 400px) {
+    html, body{
+        overflow-x: hidden;
+    }
 }
 
 * {
@@ -568,7 +570,11 @@ eneme{
 
 .lagous {
     display: inline-block;
-    animation: 15s kineme infinite linear;
+    /* animation: 15s kineme infinite linear; */
+
+    animation-timeline: scroll(root);
+    animation-name: kineme;
+    animation-timing-function: linear;
 }
 
 .lagous img {
@@ -642,6 +648,12 @@ eneme{
 /*---START OF FOOTER---*/
 .paa {
     background-color: #262C33;
+    min-height: 30vh;
+    height: auto;
+    
+}
+
+.paa>div{
     width: 100%;
     height: 30vh;
     display: flex;
@@ -795,6 +807,15 @@ eneme{
 
 @keyframes fade-in {
     to {
+        opacity: 1;
+        filter: blur(0);
+        transform: translate(0, 0);
+    }
+}
+
+@media (max-width: 400px) {
+    .local, .foreign, .researchGrid div{
+        animation: none;
         opacity: 1;
         filter: blur(0);
         transform: translate(0, 0);
