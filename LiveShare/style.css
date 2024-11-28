@@ -577,6 +577,13 @@ eneme{
     animation-timing-function: linear;
 }
 
+@media (max-width: 400px) {
+    .lagous {
+        animation: 15s kineme infinite linear;
+        animation-timeline: initial;
+    }
+}
+
 .lagous img {
     width: 200px;
     height: auto;
