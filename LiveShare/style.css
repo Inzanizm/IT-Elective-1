@@ -1,4 +1,4 @@
-html{
+html {
     -webkit-text-size-adjust: 100%;
 }
 
@@ -10,7 +10,9 @@ body {
 }
 
 @media (max-width: 400px) {
-    html, body{
+
+    html,
+    body {
         overflow-x: hidden;
     }
 }
@@ -24,15 +26,16 @@ body {
 
 /*eneme = nav*/
 
-/*---START OF NAV
+/*---START OF NAV---*/
 eneme {
     display: flex;
     width: 100%;
+    min-height: 58.4px;
     position: fixed;
     top: 0;
-    background-color: red;
+    background-color: #262C33;
     justify-content: center;
-    z-index: 1;
+    z-index: 8;
 }
 
 eneme ul {
@@ -40,20 +43,22 @@ eneme ul {
     list-style-type: none;
     display: flex;
     justify-content: space-evenly;
-    overflow-x: auto;
+    padding: 10px 0;
+    align-items: center;
 }
 
 eneme a {
+    position: relative;
     font-weight: 500;
     text-decoration: none;
     font-family: "Inter", sans-serif;
     text-align: center;
     display: block;
     font-size: 16px;
-    color: black;
+    color: white;
 }
 
-eneme a .aktib{
+eneme a .aktib {
     font-weight: bolder;
 }
 
@@ -67,24 +72,25 @@ eneme ul li::after {
     content: '';
     height: 3px;
     width: 0;
-    background: black;
+    background: white;
     position: absolute;
     left: 0;
     bottom: 0;
     transition: 0.5s;
 }
 
-eneme ul li:hover:after{
+eneme ul li:hover:after {
     width: 100%;
 }
 
-eneme{
+eneme {
     width: 100%;
 }
----*/
+
 
 /* The off-canvas menu style */
 .offcanvas {
+    display: none;
     height: 100%;
     width: 0;
     position: fixed;
@@ -94,7 +100,7 @@ eneme{
     overflow-x: hidden;
     transition: 0.3s;
     padding-top: 60px;
-    z-index: 2;
+    z-index: 9;
 }
 
 .offcanvas ul {
@@ -115,30 +121,45 @@ eneme{
 }
 
 .offcanvas ul li a:hover {
-    color: #000;
+    color: #8ecae6;
 }
 
-/* Button to open/close the menu */
 .menu-toggle {
+    display: none;
     font-size: 30px;
     position: fixed;
-    top: 20px;
+    top: 9.6px;
     right: 20px;
     background-color: transparent;
     border: none;
     color: #fff;
     padding: 0px 3px 0px 3px;
     cursor: pointer;
-    z-index: 2;
+    z-index: 9;
 }
 
-.menu-toggle:hover {
+/* Button to open/close the menu */
+@media (max-width: 900px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .offcanvas {
+        display: initial;
+    }
+
+    eneme ul {
+        display: none;
+    }
+}
+
+/* .menu-toggle:hover {
     color: #182C3E;
 }
 
 .menu-toggle:active {
     color: #000;
-}
+} */
 
 
 
@@ -214,6 +235,7 @@ eneme{
 #about p {
     font-size: 1em;
     color: black;
+    font-weight: bold;
     text-align: justify;
     font-family: Arial, Helvetica, sans-serif;
     padding-bottom: 10px;
@@ -226,8 +248,9 @@ eneme{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     background-color: #182C3E;
+    padding: 2rem;
 }
 
 #fees h1 {
@@ -236,7 +259,7 @@ eneme{
     color: #fff;
     text-align: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    margin-bottom: 4rem;
+    /* margin-bottom: 4rem; */
 }
 
 #fees .feesbox {
@@ -358,6 +381,7 @@ eneme{
     gap: 2rem;
     padding: 2rem;
     justify-content: center;
+    padding-top: 0%;
 }
 
 .researchG1 {
@@ -367,6 +391,9 @@ eneme{
     color: #087762;
     font-size: 1.1em;
     text-align: center;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 10%;
 }
 
 .researchG2 {
@@ -376,6 +403,9 @@ eneme{
     color: #087762;
     font-size: 1.1em;
     text-align: center;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 10%;
 }
 
 .researchG3 {
@@ -385,6 +415,9 @@ eneme{
     color: #087762;
     font-size: 1.1em;
     text-align: center;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 10%;
 }
 
 .researchG4 {
@@ -394,6 +427,9 @@ eneme{
     color: #087762;
     font-size: 1.1em;
     text-align: center;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 10%;
 }
 
 .researchBaks {
@@ -513,6 +549,7 @@ eneme{
     font-size: 1em;
     margin: 0px 20px 0px 20px;
     color: #fff;
+    font-weight: bold;
 }
 
 .bekstensyon li {
@@ -568,20 +605,22 @@ eneme{
 
 .orgyarn {
     overflow: hidden;
-    padding: 10% 0;
+    padding: 10px 0;
     white-space: nowrap;
 }
 
 .lagous {
     display: inline-block;
-    /* animation: 15s kineme infinite linear; */
-
     animation-timeline: scroll(root);
     animation-name: kineme;
     animation-timing-function: linear;
 }
 
-@media (max-width: 400px) {
+.orgyarn:nth-child(2) .lagous {
+    animation-direction: reverse;
+}
+
+@media (max-width: 4000px) {
     .lagous {
         animation: 15s kineme infinite linear;
         animation-timeline: initial;
@@ -595,6 +634,13 @@ eneme{
     display: inline-block;
     box-sizing: border-box;
     margin: 2vw;
+    border-radius: 50%;
+    background-color: white;
+
+}
+
+.lagous img:hover {
+    box-shadow: 0px 0px 40px rgb(0, 0, 0);
 }
 
 /*---END OF COLLABORATING ORGANIZATION---*/
@@ -625,10 +671,11 @@ eneme{
 .boxbox {
     padding: 10%;
     background-color: #CCDCFF;
-    padding-top: 2%;
-    padding-bottom: 2%;
+    padding-top: 4%;
+    padding-bottom: 4%;
     border-radius: 10px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    margin-top: 4%;
     margin-right: 30px;
     margin-left: 30px;
 }
@@ -660,7 +707,7 @@ eneme{
 .paa {
     background-color: #262C33;
     width: 100%;
-    height: 30vh;
+    height: 35vh;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -670,6 +717,7 @@ eneme{
     width: 100%;
     display: flex;
     justify-content: center;
+    padding: 10px;
 }
 
 .logo-group img {
@@ -755,7 +803,7 @@ eneme{
     height: 7px;
     position: fixed;
     top: 0;
-    z-index: 3;
+    z-index: 10;
     background-color: #8ecae6;
     width: 100%;
     scale: 0 1;
@@ -772,7 +820,7 @@ eneme{
 
 .local,
 .foreign {
-    animation-timeline: view(90% 10%);
+    animation-timeline: view(60% 20%);
     animation-name: fade-in;
     animation-timing-function: ease-out;
     animation-fill-mode: forwards;
@@ -781,15 +829,16 @@ eneme{
 }
 
 .local {
-    transform: translateX(-100%);
+    /* clip-path: inset(0 100% 0 0); */
+    transform: translateX(-10%);
 }
 
 .foreign {
-    transform: translateX(100%);
+    transform: translateX(10%);
 }
 
-.researchGrid div{
-    animation-timeline: view(60% 10%);
+.researchGrid div {
+    animation-timeline: view(70% 0%);
     animation-name: fade-in;
     animation-duration: .5s;
     animation-timing-function: ease-out;
@@ -799,28 +848,43 @@ eneme{
     transform: translateY(100%);
 }
 
-.researchGrid .researchG2{
-    animation-delay: 200ms;
-}
-
-.researchGrid .researchG3{
+.researchGrid .researchG2 {
     animation-delay: 400ms;
 }
 
-.researchGrid .researchG4{
-    animation-delay: 600ms;
+.researchGrid .researchG3 {
+    animation-delay: 800ms;
 }
+
+.researchGrid .researchG4 {
+    animation-delay: 1200ms;
+}
+
+/* .researchBaks{
+    animation-timeline: view(60% 10%);
+    animation-name: fade-in;
+    animation-duration: .5s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateY(100%);
+} */
 
 @keyframes fade-in {
     to {
         opacity: 1;
         filter: blur(0);
         transform: translate(0, 0);
+        clip-path: inset(0 0 0 0);
     }
 }
 
-@media (max-width: 400px) {
-    .local, .foreign, .researchGrid div{
+@media (max-width: 500px) {
+
+    .local,
+    .foreign,
+    .researchGrid div {
         animation: none;
         opacity: 1;
         filter: blur(0);
@@ -848,16 +912,54 @@ eneme{
 
 /*---END OF ANIMATIONS---*/
 
+#home {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #506199;
+}
+
 .containervid {
+    position: relative;
     background-color: rgb(0, 0, 0, .4);
     width: 100%;
     display: flex;
 }
 
-.background-clip {
-
-    right: 0;
-    bottom: 0;
-    z-index: -1;
+.containervid:before {
+    z-index: 5;
+    content: '';
+    position: absolute;
+    background: rgba(173, 171, 171, 0.4);
     width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+#home video {
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.center {
+    display: flex;
+    z-index: 6;
+    color: #fff;
+    width: 100%;
+    padding: 10%;
+    margin-top: 50px;
+}
+
+.center img {
+    width: 100%;
+    height: 100%;
 }
