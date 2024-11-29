@@ -32,17 +32,3 @@ document.getElementById('menu-toggle').addEventListener('click', function() {
     offcanvas.classList.toggle('open');
     body.classList.toggle('open'); // Optional: this can help manage other content when menu is open
 });
-
-// const observer = new IntersectionObserver((entries) => {
-//     entries.forEach((entry) => {
-//         console.log(entry)
-//         if (entry.isIntersecting) {
-//             entry.target.classList.add('show');
-//         } else {
-//             entry.target.classList.remove('show');
-//         }
-//     });
-// });
-
-// const hiddenElements = document.querySelectorAll('.hidden');
-// hiddenElements.forEach((el) => observer.observe(el));
