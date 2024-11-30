@@ -96,7 +96,7 @@ eneme {
 /* The off-canvas menu style */
 .offcanvas {
     display: none;
-    height: 100svh;
+    height: 150vh;
     width: 0;
     position: fixed;
     top: 0;
@@ -115,6 +115,7 @@ eneme {
 
 .offcanvas ul li {
     padding: 10px 20px;
+    white-space: nowrap;
 }
 
 .offcanvas ul li a {
@@ -144,7 +145,7 @@ eneme {
 }
 
 /* Button to open/close the menu */
-@media (max-width: 1200px) {
+@media (max-width: 1050px) {
     .menu-toggle {
         display: block;
     }
@@ -200,7 +201,7 @@ eneme {
     justify-content: space-between;
 }
 
-@media (max-width: 1402px) {
+@media (max-width: 1364px) {
     .section {
         padding: 90px 5vw;
     }
@@ -943,7 +944,7 @@ eneme {
     }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1050px) {
     .center {
         animation: none;
         position: absolute;
