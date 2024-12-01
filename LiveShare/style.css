@@ -16,9 +16,11 @@ body {
     scroll-behavior: smooth;
 }
 
-/*eneme = nav*/
 
 /*---START OF NAV---*/
+
+/*eneme = nav*/
+
 eneme {
     display: flex;
     width: 100%;
@@ -86,7 +88,6 @@ eneme ul a.aktib:after {
 eneme {
     width: 100%;
 }
-
 
 /* The off-canvas menu style */
 .offcanvas {
@@ -160,6 +161,7 @@ eneme {
 
 
 /*---START OF SECTION---*/
+
 .section {
     width: 100%;
     min-height: 100svh;
@@ -184,7 +186,7 @@ eneme {
 #home {
     position: relative;
     width: 100%;
-    height: 100dvh;
+    height: 100svh;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -247,6 +249,7 @@ eneme {
 
 /*---END OF HOME---*/
 
+
 /*---START OF ABOUT---*/
 
 #about {
@@ -286,7 +289,9 @@ eneme {
 
 /*---END OF ABOUT---*/
 
+
 /*---START OF FEES---*/
+
 #fees {
     display: flex;
     flex-direction: column;
@@ -301,7 +306,6 @@ eneme {
     color: #fff;
     text-align: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    /* margin-bottom: 4rem; */
 }
 
 #fees .feesbox {
@@ -357,6 +361,7 @@ eneme {
 }
 
 /*---END OF FEES---*/
+
 
 /*---START OF RESEARCH CATEGORY---*/
 
@@ -521,7 +526,8 @@ eneme {
 
 /*---END OF EXTENSION CATEGORY---*/
 
-/*---START OF COLLABORATING ORGANIZATION---*/
+
+/*---START OF COLLABORATING ORGANIZATIONS---*/
 
 #collab {
     background-color: #3A536B;
@@ -542,6 +548,10 @@ eneme {
 
 .lagous {
     display: inline-block;
+
+    animation: 15s kineme infinite linear;
+    animation-timeline: initial;
+
     /* animation-timeline: scroll(root);
     animation-name: kineme;
     animation-timing-function: linear; */
@@ -550,12 +560,6 @@ eneme {
 .orgyarn:nth-child(2) .lagous {
     animation-direction: reverse;
 }
-
-.lagous {
-    animation: 15s kineme infinite linear;
-    animation-timeline: initial;
-}
-
 
 .lagous img {
     width: 200px;
@@ -572,7 +576,8 @@ eneme {
     box-shadow: 0px 0px 15px rgb(0, 0, 0);
 }
 
-/*---END OF COLLABORATING ORGANIZATION---*/
+/*---END OF COLLABORATING ORGANIZATIONS---*/
+
 
 /*---START OF EPOSTER---*/
 
@@ -623,7 +628,9 @@ eneme {
 
 /*---END OF EPOSTER---*/
 
+
 /*---START OF FOOTER---*/
+
 .paa {
     background-color: #262C33;
     width: 100%;
@@ -653,13 +660,6 @@ eneme {
 .logo-group a:hover {
     scale: 1.1;
 }
-
-/* .paa {
-    display: block;
-    width: 100%;
-    justify-content: center;
-} */
-
 
 .paa ul:nth-child(2) {
     overflow: hidden;
@@ -727,7 +727,8 @@ eneme {
 /*---END OF FOOTER---*/
 
 
-/*---ANIMATIONS---*/
+/*---START OF ANIMATIONS---*/
+
 .scroll-watcher {
     height: 7px;
     position: fixed;
@@ -737,6 +738,7 @@ eneme {
     width: 100%;
     scale: 0 1;
     transform-origin: left;
+
     animation: scroll-watcher linear;
     animation-timeline: scroll();
 }
@@ -758,12 +760,13 @@ eneme {
 
 .local,
 .foreign {
+    opacity: 0;
+    filter: blur(5px);
+
     animation-timeline: view(70% 20%);
     animation-name: fade-in;
     animation-timing-function: ease-out;
     animation-fill-mode: forwards;
-    opacity: 0;
-    filter: blur(5px);
 }
 
 .local {
@@ -774,22 +777,26 @@ eneme {
     transform: translateX(10%);
 }
 
-.researchGrid div, .beks {
+.researchGrid div,
+.beks {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateY(100%);
+
     animation-timeline: view(70% 0%);
     animation-name: fade-in;
     animation-duration: .5s;
     animation-timing-function: ease-out;
     animation-fill-mode: forwards;
-    opacity: 0;
-    filter: blur(5px);
-    transform: translateY(100%);
 }
 
-.researchGrid .researchG2, .beks:nth-child(2) {
+.researchGrid .researchG2,
+.beks:nth-child(2) {
     animation-delay: 400ms;
 }
 
-.researchGrid .researchG3, .beks:last-child {
+.researchGrid .researchG3,
+.beks:last-child {
     animation-delay: 800ms;
 }
 
@@ -817,7 +824,10 @@ eneme {
 
 }
 
-/*---RESPONSIVENESS---*/
+/*---END OF ANIMATIONS---*/
+
+
+/*---START OF RESPONSIVENESS---*/
 
 @media (max-width: 400px) {
 
@@ -825,13 +835,17 @@ eneme {
     body {
         overflow-x: hidden;
     }
+
     .section h1 {
         font-size: 2em;
     }
-    #fees h2{
+
+    #fees h2 {
         font-size: 1.5em;
     }
-    .paa ul li a, .paa ul:last-child li{
+
+    .paa ul li a,
+    .paa ul:last-child li {
         font-size: 14px;
     }
 }
@@ -848,15 +862,17 @@ eneme {
     eneme ul {
         display: none;
     }
-    .section{
+
+    .section {
         padding: 70px 5vw;
     }
+
     .center {
-        animation: none;
         position: absolute;
         z-index: 6;
         align-items: center;
-        min-height: calc(90dvh - 60px);
+
+        animation: none;
     }
 }
 
@@ -864,6 +880,7 @@ eneme {
     .section {
         padding: 90px 5vw;
     }
+
     @keyframes move-up {
         100% {
             padding: 0;
@@ -895,12 +912,16 @@ eneme {
 }
 
 @media (max-width: 500px) {
+
     .local,
     .foreign,
     .researchGrid div {
-        animation: none;
         opacity: 1;
         filter: blur(0);
         transform: translate(0, 0);
+
+        animation: none;
     }
 }
+
+/*---END OF RESPONSIVENESS---*/

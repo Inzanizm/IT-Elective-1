@@ -1,5 +1,5 @@
 
-//--------NAVIGATION BAR HIGHLIGHTS WHEN ACTIVE--------//
+//----------NAVIGATION BAR HIGHLIGHTS WHEN ACTIVE----------//
 
 // Select all sections and menu links
 let section = document.querySelectorAll(".section");
@@ -53,7 +53,7 @@ highlight();
 
 
 
-//--------------------------TOGGLE OFF CANVAS MENU--------------------------//
+//----------TOGGLE OFF CANVAS MENU----------//
 
 document.getElementById('menu-toggle').addEventListener('click', function () {
     const offcanvas = document.getElementById('offcanvas-menu'); // Get the offcanvas menu element
@@ -67,9 +67,8 @@ document.getElementById('menu-toggle').addEventListener('click', function () {
 
 
 
+//----------REMOVE EXTRA HEIGHT AFTER LOGO ANIMATION----------//
 
-
-//-------------REMOVE EXTRA HEIGHT AFTER LOGO ANIMATION-------------//
 const center = document.querySelector('.center');
 
 window.addEventListener('scroll', () => {
