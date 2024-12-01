@@ -184,7 +184,7 @@ eneme {
 #home {
     position: relative;
     width: 100%;
-    height: 100svh;
+    height: 100dvh;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -774,7 +774,7 @@ eneme {
     transform: translateX(10%);
 }
 
-.researchGrid div {
+.researchGrid div, .beks {
     animation-timeline: view(70% 0%);
     animation-name: fade-in;
     animation-duration: .5s;
@@ -785,11 +785,11 @@ eneme {
     transform: translateY(100%);
 }
 
-.researchGrid .researchG2 {
+.researchGrid .researchG2, .beks:nth-child(2) {
     animation-delay: 400ms;
 }
 
-.researchGrid .researchG3 {
+.researchGrid .researchG3, .beks:last-child {
     animation-delay: 800ms;
 }
 
@@ -825,6 +825,15 @@ eneme {
     body {
         overflow-x: hidden;
     }
+    .section h1 {
+        font-size: 2em;
+    }
+    #fees h2{
+        font-size: 1.5em;
+    }
+    .paa ul li a, .paa ul:last-child li{
+        font-size: 14px;
+    }
 }
 
 @media (max-width: 1050px) {
@@ -839,21 +848,22 @@ eneme {
     eneme ul {
         display: none;
     }
+    .section{
+        padding: 70px 5vw;
+    }
+    .center {
+        animation: none;
+        position: absolute;
+        z-index: 6;
+        align-items: center;
+        min-height: calc(90dvh - 60px);
+    }
 }
 
 @media (max-width: 1364px) {
     .section {
         padding: 90px 5vw;
     }
-}
-
-@media (max-width: 1050px) {
-    .section{
-        padding: 70px 5vw;
-    }
-}
-
-@media (max-width: 1364px) {
     @keyframes move-up {
         100% {
             padding: 0;
@@ -861,21 +871,6 @@ eneme {
             width: 150px;
             filter: drop-shadow(0 0 .5px rgb(174, 217, 217));
         }
-    }
-}
-
-@media (max-width: 1050px) {
-    .center {
-        animation: none;
-        position: absolute;
-        z-index: 6;
-        align-items: center;
-    }
-}
-
-@media (max-width: 400px) {
-    .section h1 {
-        font-size: 2em;
     }
 }
 
